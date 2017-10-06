@@ -19,3 +19,5 @@ router.get('/beers', (req, res, next) => {
           res.status(200).json(beers);
       });
 });
+
+module.exports = router;

@@ -17,13 +17,12 @@ const userSchema = new Schema(
       encryptedPassword: {
           type: String,
           required: [true, 'Password is required.']
+      },
+      preferences: {
+        type: Array
       }
-  },
 
-  {
-      timestamps: true
-  }
-);
+});
 
 const UserModel = mongoose.model('User', userSchema);
 

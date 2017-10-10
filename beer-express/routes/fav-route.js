@@ -38,17 +38,11 @@ router.post('/favorites', (req, res, next) => {
 });
 
 router.get('/favorites', (req, res, next) => {
-    UserModel.favorites.find()
-      .sort({ _id: -1 })
-      .exec((err, recentFavs) => {
-          if (err) {
-              console.log('Error finding favorites', err);
-              res.status(500).json({ errorMessage: 'Finding favorites went wrong' });
-              return;
-          }
-
-          res.status(200).json(recentFavs);
-      });
+  if (!req.user) {
+      res.status(401).json({ errorMessage: 'Not logged in. 🥊' });
+      return;
+  }
+      res.status(200).json(req.user.favorites);
 });
 
 module.exports = router;

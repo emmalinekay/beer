@@ -13,16 +13,14 @@ router.post('/preferences', (req, res, next) => {
         res.status(401).json({ errorMessage: 'Not logged in. 🥊' });
         return;
     }
+      // req.user.preferences.push(
+      //   req.body.preferences );
 
-    // UserModel.findById(req.user._id, (err, userFromDb)=>{
-    //   if (err){
-    //     console.log('Phone details ERROR', err);
-    //     res.status(500).json({ errorMessage: 'Phone details went wrong 💩' });
-    //     return;
-    //   }
-
-      req.user.preferences.push(
-        req.body.preferences );
+      //loop through preferences
+      //push every individual style into prefeerences array
+      req.body.preferences.forEach((oneStyle) => {
+        req.user.preferences.push(oneStyle);
+      });
 
       console.log(req.user.preferences);
 
@@ -40,9 +38,36 @@ router.post('/preferences', (req, res, next) => {
             return;
         }
         res.status(200).json(req.user);
-
-      // });
     });
+});
+
+router.get('/beers', (req, res, next) => {
+    BeerModel.find({style: req.user.preferences})
+      // .limit(20)
+      // .sort({ _id: -1 })
+      .exec((err, recentBeers) => {
+          if (err) {
+              console.log('Error finding beers', err);
+              res.status(500).json({ errorMessage: 'Finding beer went wrong' });
+              return;
+          }
+          res.status(200).json(recentBeers);
+      });
+});
+
+router.get('/beers/:beerId', (req, res, next) => {
+    BeerModel.findById(
+      req.params.beerId,
+      (err, beerFromDb) => {
+          if (err) {
+              console.log('Beer details ERROR', err);
+              res.status(500).json({ errorMessage: 'Something went wrong' });
+              return;
+          }
+
+          res.status(200).json(beerFromDb);
+      }
+    );
 });
 
 

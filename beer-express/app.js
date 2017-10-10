@@ -60,6 +60,9 @@ app.use('/api', myAuthRoutes);
 const myBeerRoutes = require('./routes/beer-route');
 app.use('/api', myBeerRoutes);
 
+const myFavRoutes = require('./routes/fav-route');
+app.use('/api', myFavRoutes);
+
 // Routes end.
 
 app.use((req, res, next) => {

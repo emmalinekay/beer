@@ -79,7 +79,7 @@ router.post('/beers', (req, res, next) => {
     const theBeer = new BeerModel({
         name: req.body.beerName,
         location: req.body.beerLocation,
-        style: req.body.beerImage,
+        style: req.body.beerStyle,
         ibu: req.body.beerIbu,
         abv: req.body.beerAbv,
         description: req.body.beerDescription,

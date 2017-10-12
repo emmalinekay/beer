@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const BeerModel = require('../models/beer-model.js');
 
-mongoose.connect('mongodb://localhost/beer-express');
+require('dotenv').config();
+mongoose.connect(process.env.MONGODB_URI);
 
 const beerArray = [
 {
@@ -374,6 +375,42 @@ const beerArray = [
 "image": "../assets/Beer-Photos/Jolly-Pumpkin-Calabaza-Blanca.png"
 },
 {
+"name": "Boulevard Brewing Co Wheat",
+"location": "MI",
+"style": "Wheat",
+"ibu": 15,
+"abv": 4.4,
+"description": "Boulevard Unfiltered Wheat Beer is a lively, refreshing ale with a natural citrusy flavor and distinctive cloudy appearance. This easy drinking American-style wheat beer has become our most popular offering, and the best-selling craft beer in the Midwest.",
+"image": "../assets/Beer-Photos/Boulevard-Wheat.png"
+},
+{
+"name": "Harpoon UFO White",
+"location": "MA",
+"style": "Wheat",
+"ibu": 15,
+"abv": 4.8,
+"description": "Light, crisp, refreshing UFO White follows in the tradition of spiced wheat beers that have been brewed in Belgium for well over 300 years. Brewed with orange peel and a unique blend of spices, UFO White is the perfect choice for a summer’s barbecue, a night out with friends or any time you¹re thirsting for something a little different. ",
+"image": "../assets/Beer-Photos/ufo.png"
+},
+{
+"name": "Red Hare Brewing Whabbit Wheat",
+"location": "GA",
+"style": "Wheat",
+"ibu": 15,
+"abv": 5.6,
+"description": "Wheat ale w/ peaches and apricots",
+"image": "../assets/Beer-Photos/Whabbit-Wheat.png"
+},
+{
+"name": "Funky Buddha Brewery Floridian Hefeweizen",
+"location": "FA",
+"style": "Wheat",
+"ibu": 15,
+"abv": 5.2,
+"description": "Our unfiltered and refreshing German-style wheat beer is full on flavor yet light on the palate. Authentic hefeweizen yeast creates the compelling aromas of bananas, citrus, and cloves, while the all wheat and malt body perfectly captures the brilliance of a golden Florida sunset.",
+"image": "../assets/Beer-Photos/Funky-Buddha.png"
+},
+{
 "name": "Augustiner Dunkel",
 "location": "Munich, Germany",
 "style": "Dark Lager",
@@ -462,6 +499,69 @@ const beerArray = [
 "abv": 5.8,
 "description": "This smooth lager strikes a delicate balance between malt and hops in the aroma, palate, finish and body. It has more body and less hops than a Pilsner, and less malt and more hops than a Munich style lager.",
 "image": "../assets/Beer-Photos/Great-Lakes-Dortmunder-Gold.png"
+},
+{
+"name": "The Crisp Sixpoint Brewery",
+"location": "Brooklyn, NY",
+"style": "Pale Lager",
+"ibu": 44,
+"abv": 5.4,
+"description": "On the nose, The Crisp smells of strong yeast. You can easily taste its sweet maltiness (expect caramel), but this sweetness is fleeting. The finish has a bite of hops, which IPA loyalists can appreciate.",
+"image": "../assets/Beer-Photos/crisp.png"
+},
+{
+"name": "Narragansett Brewing Co. Lager",
+"location": "Providence, RI",
+"style": "Pale Lager",
+"ibu": 12,
+"abv": 5,
+"description": "Gansett’s lager is a classic. Extremely drinkable, it has notes of sweet corn on the palate along with a faint creaminess, like cream soda. It’s interesting enough to sip on, slowly, with friends. And if a game of pong breaks out, this lager is good for that too.",
+"image": "../assets/Beer-Photos/Narragansett.png"
+},
+{
+"name": "New Glarus Two Women Lager",
+"location": "New Glarus, WI",
+"style": "Pale Lager",
+"ibu": '',
+"abv": 5,
+"description": "This is a good entry-level craft beer. It’s complex, with a fruity nose and light biscuity finish, yet it’s also easy to drink — clean and very approachable.",
+"image": "../assets/Beer-Photos/twowomen.png"
+},
+{
+"name": "New Glarus Two Women Lager",
+"location": "New Glarus, WI",
+"style": "Pale Lager",
+"ibu": '',
+"abv": 5,
+"description": "This is a good entry-level craft beer. It’s complex, with a fruity nose and light biscuity finish, yet it’s also easy to drink — clean and very approachable.",
+"image": "../assets/Beer-Photos/twowomen.png"
+},
+{
+"name": "Sapporo Premium Beer",
+"location": "Japan",
+"style": "Pale Lager",
+"ibu": '',
+"abv": 4.9,
+"description": "",
+"image": "../assets/Beer-Photos/sapporo.png"
+},
+{
+"name": "Warsteiner Premium German Pilsener",
+"location": "Germany",
+"style": "Pale Lager",
+"ibu": '',
+"abv": 4.8,
+"description": "",
+"image": "../assets/Beer-Photos/Warsteiner.png"
+},
+{
+"name": "Peroni",
+"location": "Italy",
+"style": "Pale Lager",
+"ibu": '',
+"abv": 4.7,
+"description": "The original Italian lager. Peroni is the number one lager brand in Italy and has been for over one and a half centuries. This premium, clear, golden-yellow lager, with 4.7 ABV, is the result of the dedication to brewing of generations of the most qualified braumeisters. Brewed using the finest spring barley malts and hops, its taste is slightly bitter. A refreshing smooth lager, Peroni is suitable for all occasions.",
+"image": "../assets/Beer-Photos/Peroni.png"
 },
 {
 "name": "Paulaner Oktoberfest",

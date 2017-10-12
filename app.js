@@ -13,7 +13,8 @@ const passport     = require('passport');
 
 require('./config/passport-config');
 
-mongoose.connect('mongodb://localhost/beer-express');
+require('dotenv').config();
+mongoose.connect(process.env.MONGODB_URI);
 
 
 const app = express();

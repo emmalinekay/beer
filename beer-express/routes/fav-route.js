@@ -45,4 +45,34 @@ router.get('/favorites', (req, res, next) => {
       res.status(200).json(req.user.favorites);
 });
 
+
+router.delete('/favorites/:beerId', (req, res, next) => {
+    if (!req.user) {
+        res.status(401).json({ errorMessage: 'Not logged in. 🥊' });
+        return;
+    }
+
+    console.log('Hey');
+
+    req.user.favorites.splice(req.body.favorites, 1);
+
+    console.log(req.user);
+
+    req.user.save((err)=>{
+      if (req.user.errors) {
+          res.status(400).json({
+              errorMessage: 'Update validation failed 🤢',
+              validationErrors: req.user.errors
+          });
+          return;
+      }
+      if (err) {
+          console.log('ERROR', err);
+          res.status(500).json({ errorMessage: '💩' });
+          return;
+      }
+      res.status(200).json(req.user);
+  });
+});
+
 module.exports = router;

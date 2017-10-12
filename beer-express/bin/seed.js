@@ -122,6 +122,33 @@ const beerArray = [
 "image": "../assets/Beer-Photos/Deschutes-Black-Butte.png"
 },
 {
+"name": "Ballast Point Victory at Sea",
+"location": "San Diego, CA",
+"style": "Porter",
+"ibu": 30,
+"abv": 10,
+"description": "Two of the world’s oldest beverages join forces to conquer your palate. Victory at Sea embodies the art of masterful brewing by infusing a velvety Imperial Porter with pure vanilla flavor and specially-selected, hand roasted coffee. The addition of cold brewed coffee to the beer lends a subtle roasted flavor to this robust imperial porter, blending perfectly with rich vanilla and caramel undertones. By uniting two San Diego brewing traditions, Caffe Calabria freshly brewed coffee and Ballast Point beer, we have successfully created an artisanal masterpiece.",
+"image": "../assets/Beer-Photos/ballast-point.png"
+},
+{
+"name": "Stone Smoked Porter",
+"location": "Escondido, CA",
+"style": "Porter",
+"ibu": 30,
+"abv": 5.9,
+"description": "A rich, dark and delicious porter with chocolate and coffee overtones accented by a subtle smokiness from just the right amount of peat smoked malt. Unlike a rauchbier, the smoke in Stone Smoked Porter is an ELEMENT of the character rather than being THE character.",
+"image": "../assets/Beer-Photos/stone-smoked-porter.png"
+},
+{
+"name": "Kona Pipeline Porter",
+"location": "Kailua Kona, HI",
+"style": "Porter",
+"ibu": 30,
+"abv": 5.3,
+"description": "Pipeline Porter is smooth and dark with a distinctive roasty aroma and earthy complexity from its diverse blends of premium malted barley. ",
+"image": "../assets/Beer-Photos/Kona-Pipeline-Porter.png"
+},
+{
 "name": "Anchor Porter",
 "location": "San Francisco, CA",
 "style": "Porter",
@@ -507,7 +534,61 @@ const beerArray = [
 "abv": 7.8,
 "description": "A blazing rich beer, this is a doppelbock based on an Oktoberfest personality. Warm and intriguing, the perfect Brandy Snifter beer. Available September and October.",
 "image": "../assets/Beer-Photos/capital-autumnal-fire.png"
-}
+},
+{
+"name": "Liefmans Fruitesse",
+"location": "Belgium",
+"style": "Belgian",
+"ibu": 36,
+"abv": 3.8,
+"description": "Sipping a Liefmans Fruitesse on the rocks is like taking a city break in Berlin, soaking up the atmosphere in Milan or discovering culture in New York. Take your time to enjoy it in a friendly bar, or chilling out with your friends.",
+"image": "../assets/Beer-Photos/Liefmans.png"
+},
+{
+"name": "Duvel",
+"location": "Belgium",
+"style": "Belgian",
+"ibu": 30,
+"abv": 8.5,
+"description": "Four generations of the Moortgat family have brought together Pilsner malts, Bohemian hops, and a unique yeast strain to create this intense, aromatic and beguiling ale. This Belgian favourite is best enjoyed chilled (40 - 50 F) with discerning friends or good-looking strangers.",
+"image": "../assets/Beer-Photos/duvel.png"
+},
+{
+"name": "Vedett Extra Blonde",
+"location": "Belgium",
+"style": "Belgian",
+"ibu": '',
+"abv": 5.2,
+"description": "Vedett, a blond, light, well hopped premium beer with 5.2% alcohol content, is the cult Duvel Moortgat beer today: following its birth in 1945, it quickly acquired fame and recognition within an intimate circle of insiders in the Antwerp-Brussels region.",
+"image": "../assets/Beer-Photos/vedett.png"
+},
+{
+"name": "Maredsous",
+"location": "Belgium",
+"style": "Belgian",
+"ibu": '',
+"abv": 10,
+"description": "Vedett, a blond, light, well hopped premium beer with 5.2% alcohol content, is the cult Duvel Moortgat beer today: following its birth in 1945, it quickly acquired fame and recognition within an intimate circle of insiders in the Antwerp-Brussels region.",
+"image": "../assets/Beer-Photos/maredsous.png"
+},
+{
+"name": "La Chouffe",
+"location": "Belgium",
+"style": "Belgian",
+"ibu": '',
+"abv": 8,
+"description": "CHOUFFE is an unfiltered blond beer which is refermented both in the bottle and in barrels. It is pleasantly fruity, spiced with coriander and tinged with hops.",
+"image": "../assets/Beer-Photos/chouffe.png"
+},
+{
+"name": "De Koninck",
+"location": "Belgium",
+"style": "Belgian",
+"ibu": '',
+"abv": 5.2,
+"description": "CHOUFFE is an unfiltered blond beer which is refermented both in the bottle and in barrels. It is pleasantly fruity, spiced with coriander and tinged with hops.",
+"image": "../assets/Beer-Photos/dekoninck.png"
+},
 ];
 
 BeerModel.create(

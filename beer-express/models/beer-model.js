@@ -3,9 +3,17 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const beerSchema = new Schema({
-  name: { type: String },
+  name: {
+    type: String,
+    index: true,
+    searchable: true,
+   },
   location: { type: String },
-  style: { type: String },
+  style: {
+    type: String,
+    index: true,
+    searchable: true,
+  },
   ibu: { type: Number },
   abv: { type: Number },
   description: { type: String },

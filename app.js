@@ -17,7 +17,7 @@ require('dotenv').config();
 mongoose.connect(process.env.MONGODB_URI);
 
 
-const app = express();    
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

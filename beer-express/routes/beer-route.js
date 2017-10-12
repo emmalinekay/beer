@@ -70,5 +70,40 @@ router.get('/beers/:beerId', (req, res, next) => {
     );
 });
 
+router.post('/beers', (req, res, next) => {
+    if (!req.user) {
+        res.status(401).json({ errorMessage: 'Not logged in.' });
+        return;
+    }
+
+    const theBeer = new BeerModel({
+        name: req.body.beerName,
+        location: req.body.beerLocation,
+        style: req.body.beerImage,
+        ibu: req.body.beerIbu,
+        abv: req.body.beerAbv,
+        description: req.body.beerDescription,
+        image: req.body.beerImage
+    });
+
+    theBeer.save((err) => {
+        if (theBeer.errors) {
+            res.status(400).json({
+                errorMessage: 'Validation failed 🤢',
+                validationErrors: theBeer.errors
+            });
+            return;
+        }
+
+        if (err) {
+            console.log('Error posting beer', err);
+            res.status(500).json({ errorMessage: 'Something went wrong' });
+            return;
+        }
+
+        res.status(200).json(theBeer);
+    });
+});
+
 
 module.exports = router;
